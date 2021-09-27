@@ -1,0 +1,2 @@
+podman run -dt --rm  --publish-all  --name airflow -p 8080:8080   -e AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=   -e AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=   -e AIRFLOW_EXECUTOR=CeleryExecutor   -e AIRFLOW_DATABASE_NAME=bitnami_airflow   -e AIRFLOW_DATABASE_USERNAME=bn_airflow   -e AIRFLOW_DATABASE_PASSWORD=bitnami1   -e AIRFLOW_LOAD_EXAMPLES=yes   -e AIRFLOW_PASSWORD=bitnami123   -e AIRFLOW_USERNAME=user   -e AIRFLOW_EMAIL=user@example.com   --net airflow-tier   --volume airflow_data:/bitnami   bitnami/airflow:latest
+
